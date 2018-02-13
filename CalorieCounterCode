@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package gpo_01_weberanthony;
+
+import java.util.Scanner;
+
+public class GPO_01_WeberAnthony {
+
+    
+    public static void main(String[] args) 
+    {
+        System.out.print("Welcome people to DO YOU FEEL GUILTY YET?\n");
+        System.out.print("I am Anthony Weber and this program was a collab of:"
+                + "\n");
+        System.out.print("\tChambers, Jermaine\n");
+        System.out.print("\tLand, Robert\n");
+        System.out.print("\tReagan, Bethany\n");
+        System.out.print("\tRodriguezmiller, Jaime\n");
+        System.out.println("\tWilliam, Merritt");
+        
+        Scanner keyboard = new Scanner(System.in);
+        
+        String product;
+        int servings;
+        int calories;
+        int totalCalories;        
+        float maleCalories = 2500;
+        float femaleCalories = 2000;
+        float percentage;
+        float percentage2;
+        float percentage3;
+        float percentage4;
+                      
+        System.out.print("Welcome to: DO YOU FEEL GUILTY YET?");
+        System.out.println();
+        
+        System.out.print("What are you eating/drinking? ");
+        product = keyboard.nextLine();
+        
+        System.out.print("How many calories are there per serving? ");
+        calories = keyboard.nextInt();
+        
+        System.out.print("Finally, how many serving have you had(round to the"
+                + "nearest whole number)? ");
+        servings = keyboard.nextInt();
+        
+        totalCalories = calories * servings;
+        
+        System.out.println("At " + servings + " servings of " + product + " you "
+                + "have ingested " + totalCalories + " calories." );
+        
+        percentage = totalCalories/maleCalories;
+        percentage2 = (short) (percentage * 100);
+        System.out.println("This is " + percentage2 + " percent of Males"
+                    + " daily calories.");
+        percentage3 = totalCalories/femaleCalories;
+        percentage4 = (short) (percentage3 * 100);
+        System.out.println("This is " + percentage4 + " percent of Females"
+                + " daily calories.");
+        System.out.println("Do you feel guilty yet?");
+    }
+    
+}
